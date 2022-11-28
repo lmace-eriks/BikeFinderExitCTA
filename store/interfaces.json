@@ -1,0 +1,6 @@
+{
+  "bikefinderexitcta": {
+    "component": "BikeFinderExitCTA",
+    "composition": "children"
+  }
+}
