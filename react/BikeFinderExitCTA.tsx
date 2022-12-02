@@ -4,8 +4,7 @@ import { canUseDOM } from "vtex.render-runtime";
 import styles from "./styles.css";
 
 interface BikeFinderExitCTAProps {
-  popupGuideKey: string
-  exitGuideKey: string
+
 }
 
 declare global {
@@ -14,13 +13,13 @@ declare global {
   }
 }
 
-const BikeFinderExitCTA: StorefrontFunctionComponent<BikeFinderExitCTAProps> = ({ popupGuideKey, exitGuideKey }) => {
+const BikeFinderExitCTA: StorefrontFunctionComponent<BikeFinderExitCTAProps> = ({ }) => {
 
   useEffect(() => {
 
     window.PREEZIE_GUIDE.render([
       {
-        guideKey: popupGuideKey,
+        guideKey: "EPO-c136a9e9-eb32-4ac5-2e7a-08daa6730d52",
         version: "1.0.0",
         renderTo: "preezie-widget-div-id-popup",
       },
@@ -28,7 +27,7 @@ const BikeFinderExitCTA: StorefrontFunctionComponent<BikeFinderExitCTAProps> = (
 
     window.PREEZIE_GUIDE.render([
       {
-        guideKey: exitGuideKey,
+        guideKey: "EPO-c136a9e9-eb32-4ac5-2e7a-08daa6730d52",
         version: "1.0.0",
         renderTo: "preezie-widget-div-id-exit",
       },
@@ -46,16 +45,7 @@ const BikeFinderExitCTA: StorefrontFunctionComponent<BikeFinderExitCTAProps> = (
 BikeFinderExitCTA.schema = {
   title: "Bike Finder Exit and Popup",
   type: "object",
-  properties: {
-    popupGuideKey: {
-      title: "Popup Guide Key",
-      type: "string"
-    },
-    exitGuideKey: {
-      title: "Exit Intent Guide Key",
-      type: "string"
-    }
-  }
+  properties: {}
 }
 
 export default BikeFinderExitCTA;
